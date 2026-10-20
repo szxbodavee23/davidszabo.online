@@ -14,7 +14,7 @@
 		repoCount: 9,
 		/* Web3Forms access key — https://web3forms.com (ingyenes, e-mail cím kell hozzá).
 		   A kulcsot ide írd be, és a kapcsolat űrlap azonnal működik. */
-		web3formsKey: '',
+		web3formsKey: 'b00ac53e-b215-4eac-9cb2-d0e9c59531c1',
 	};
 	/* ================================================= */
 
