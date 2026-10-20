@@ -2,15 +2,15 @@
 
 Szabó Dávid személyes portfólióoldala. Tiszta HTML + CSS + vanilla JS,
 a GitHub repókat kliens oldalról tölti a publikus GitHub API-ból.
+Hoszt: **Vercel** (ingyenes), domain: davidszabo.online.
 
 ## Fájlok
 
 - `index.html` — az egyoldalas site (hero, rólam, szolgáltatások, portfólió, kapcsolat)
-- `404.html` — GitHub Pages automatikusan ezt szolgálja hibás URL-ekre
+- `404.html` — a Vercel automatikusan ezt szolgálja hibás URL-ekre
 - `assets/css/main.css` — a Creative Studio téma stíluslapja (dark/light mód)
 - `assets/js/main.js` — menü, téma kapcsoló, GitHub repók, Web3Forms űrlap
-- `CNAME` — GitHub Pages custom domain (davidszabo.online)
-- `.nojekyll` — kikapcsolja a Jekyll-feldolgozást a Pagesen
+- `assets/img/about.jpg` — bemutatkozó kép
 
 ## Beállítás
 
@@ -21,23 +21,21 @@ a GitHub repókat kliens oldalról tölti a publikus GitHub API-ból.
 ### 2. GitHub felhasználónév
 `assets/js/main.js` → `CST_CONFIG.githubUser` (alapból `szxbodavee23`).
 
-### 3. Publikálás GitHub Pages-re
-1. Hozz létre egy **public** repót (pl. `davidszabo.online` vagy `szxbodavee23.github.io`).
-2. Pushold fel a fájlokat.
-3. Repo → **Settings → Pages → Deploy from a branch → main / root**.
-4. **Custom domain**: `davidszabo.online` → Save → **Enforce HTTPS** bekapcsolása (a DNS propagáció után).
+## Deploy — Vercel
 
-### 4. Namecheap DNS
-Namecheap → Domain List → `davidszabo.online` → Manage → **Advanced DNS**:
+**A leggyorsabb (Vercel CLI):**
 
-- Töröld a default parkoló/átirányító rekordokat, majd add hozzá:
+```bash
+cd davidszabo.online
+npx vercel login
+npx vercel --prod
+```
 
-| Type  | Host | Value                  |
-|-------|------|------------------------|
-| A     | @    | 185.199.108.153        |
-| A     | @    | 185.199.109.153        |
-| A     | @    | 185.199.110.153        |
-| A     | @    | 185.199.111.153        |
-| CNAME | www  | szxbodavee23.github.io |
+Az első futtatásnál válaszd a meglévő Vercel projektedet (amihez a
+davidszabo.online már hozzá van rendelve) — a `--prod` azonnal élesíti.
 
-~10-30 perc múlva él a https://davidszabo.online cím.
+**Vagy Git-repóból (automatikus deploy minden push után):**
+
+1. Pushold fel ezt a mappát egy GitHub repóba.
+2. Vercel → Add New → Project → Import a repót → Deploy.
+3. Settings → Domains → davidszabo.online hozzárendelve (már kész).

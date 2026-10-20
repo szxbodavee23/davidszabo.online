@@ -45,8 +45,77 @@
 		initGithubRepos();
 		initContactForm();
 		initScrollReveal();
+		initTypewriter();
 		initFooterYear();
 	} );
+
+	/* ------------------------------------------------------------------
+	 * Gépelődő kódablak a hero-ban — React / Java / Spring snippetek
+	 * rotálva, egyszerű syntax highlighttal.
+	 * ------------------------------------------------------------------ */
+	function initTypewriter() {
+		var code = document.getElementById( 'typewriter-code' );
+		if ( ! code ) {
+			return;
+		}
+
+		var snippets = [
+			'// portfolio.jsx\nconst david = {\n  stack: [ \'React\', \'Java\', \'Spring\' ],\n  passion: \'web & film\',\n  hireable: true\n};',
+			'// PortfolioApp.java\n@SpringBootApplication\npublic class PortfolioApp {\n    public static void main( String[] args ) {\n        SpringApplication.run( PortfolioApp.class, args );\n    }\n}',
+			'// App.jsx\nexport default function Hero() {\n    return (\n        <h1>Szia, David vagyok</h1>\n    );\n}'
+		];
+
+		var escHtml = function ( s ) {
+			return s.replace( /&/g, '&amp;' ).replace( /</g, '&lt;' ).replace( />/g, '&gt;' );
+		};
+
+		var highlight = function ( t ) {
+			return escHtml( t )
+				.replace( /(\/\/[^\n]*)/g, '<span class="tok-com">$1</span>' )
+				.replace( /('[^'\n]*'?)/g, '<span class="tok-str">$1</span>' )
+				.replace( /(@[A-Za-z_]+)/g, '<span class="tok-ann">$1</span>' )
+				.replace( /\b(const|return|new|public|class|import|from|export|default|function|static|void)\b/g, '<span class="tok-kw">$1</span>' )
+				.replace( /\b(true|false|null)\b/g, '<span class="tok-lit">$1</span>' )
+				.replace( /(&lt;\/?)([a-zA-Z][\w-]*)/g, '$1<span class="tok-tag">$2</span>' );
+		};
+
+		if ( window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches ) {
+			code.innerHTML = highlight( snippets[ 0 ] );
+			return;
+		}
+
+		var idx = 0;
+		var pos = 0;
+		var erasing = false;
+
+		var tick = function () {
+			var text = snippets[ idx ];
+
+			if ( ! erasing ) {
+				pos++;
+				if ( pos >= text.length ) {
+					erasing = true;
+					code.innerHTML = highlight( text );
+					setTimeout( tick, 3800 );
+					return;
+				}
+				code.innerHTML = highlight( text.slice( 0, pos ) );
+				setTimeout( tick, 34 + Math.random() * 40 );
+			} else {
+				pos = Math.max( 0, pos - 4 );
+				code.innerHTML = highlight( text.slice( 0, pos ) );
+				if ( 0 === pos ) {
+					erasing = false;
+					idx = ( idx + 1 ) % snippets.length;
+					setTimeout( tick, 500 );
+					return;
+				}
+				setTimeout( tick, 14 );
+			}
+		};
+
+		tick();
+	}
 
 	/* ------------------------------------------------------------------
 	 * Sticky fejléc
