@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Szabó Dávid — Kreatív Stúdió · Média, videó, web</title>
+	<meta name="description" content="Videóvágás és color grading, 3D grafika és modern webfejlesztés — egy kézben, egy stúdióban. Szabó Dávid portfóliója.">
+	<meta property="og:title" content="Szabó Dávid — Kreatív Stúdió">
+	<meta property="og:description" content="Videóvágás, 3D grafika és modern webfejlesztés — egy kézben.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://davidszabo.online">
+	<meta property="og:image" content="https://davidszabo.online/assets/img/about.jpg">
+	<meta name="theme-color" content="#0b0b12">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<script>
+	/* A mentett téma beállítása még a renderelés előtt (FOUC elkerülése). */
+	( function () {
+		var theme = 'dark';
+		try {
+			var saved = localStorage.getItem( 'cst-theme' );
+			if ( 'light' === saved || 'dark' === saved ) {
+				theme = saved;
+			}
+		} catch ( e ) {}
+		document.documentElement.setAttribute( 'data-theme', theme );
+	} )();
+	</script>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+<a class="screen-reader-text skip-link" href="#primary">Ugrás a tartalomra</a>
+
+<header class="site-header" id="site-header">
+	<div class="container site-header__inner">
+		<div class="site-branding">
+			<a class="site-branding__link" href="./" rel="home">
+				<span class="site-branding__mark" aria-hidden="true">SD</span>
+				<span class="site-branding__name">Szabó Dávid</span>
+			</a>
+		</div>
+
+		<nav class="main-nav" id="site-nav" aria-label="Főmenü">
+			<ul id="primary-menu" class="menu">
+				<li><a href="#rolam">Rólam</a></li>
+				<li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+				<li><a href="#munkaink">Munkáink</a></li>
+				<li><a href="#kapcsolat">Kapcsolat</a></li>
+			</ul>
+		</nav>
+
+		<button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Váltás világos módra">
+			<svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+			<svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+		</button>
+
+		<a class="btn btn--small btn--outline header-cta" href="#kapcsolat">Ajánlatkérés</a>
+
+		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü megnyitása">
+			<span class="nav-toggle__bar"></span>
+			<span class="nav-toggle__bar"></span>
+			<span class="nav-toggle__bar"></span>
+		</button>
+	</div>
+</header>
+
+<main id="primary" class="site-main">
+
+	<!-- ============ HERO ============ -->
+	<section class="hero">
+		<div class="hero__bg" aria-hidden="true">
+			<div class="hero__grid-lines"></div>
+			<div class="hero__glow hero__glow--violet"></div>
+			<div class="hero__glow hero__glow--cyan"></div>
+		</div>
+
+		<div class="container hero__inner">
+			<p class="hero__eyebrow reveal">
+				<span class="pulse-dot" aria-hidden="true"></span>
+				Kreatív stúdió · Média, videó, web
+			</p>
+
+			<h1 class="hero__title reveal" style="--reveal-delay: 80ms;">
+				Történeteket mesélünk,<br>
+				<span class="text-gradient">digitális élményeket építünk.</span>
+			</h1>
+
+			<p class="hero__lead reveal" style="--reveal-delay: 160ms;">
+				Videóvágás és color grading, 3D grafika, valamint modern, villámgyors webfejlesztés — egy kézben, egy stúdióban. A koncepciótól a végső renderig.
+			</p>
+
+			<div class="hero__actions reveal" style="--reveal-delay: 240ms;">
+				<a class="btn btn--primary" href="#munkaink">Munkáink megtekintése</a>
+				<a class="btn btn--ghost" href="#kapcsolat">
+					Ajánlatkérés
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+				</a>
+			</div>
+
+			<dl class="hero__stats reveal" style="--reveal-delay: 320ms;">
+				<div class="hero__stat">
+					<dt>150+</dt>
+					<dd>Leadott projekt</dd>
+				</div>
+				<div class="hero__stat">
+					<dt>8</dt>
+					<dd>Év tapasztalat</dd>
+				</div>
+				<div class="hero__stat">
+					<dt>40M+</dt>
+					<dd>Videó megtekintés</dd>
+				</div>
+			</dl>
+		</div>
+
+		<a class="hero__scroll-hint" href="#rolam" aria-label="Görgess lejjebb">
+			<span></span>
+		</a>
+	</section>
+
+	<!-- ============ RÓLAM ============ -->
+	<section id="rolam" class="section about">
+		<div class="container about__inner">
+			<div class="about__media reveal">
+				<div class="about__frame">
+					<img src="assets/img/about.jpg" alt="Szabó Dávid portré" loading="lazy">
+				</div>
+				<div class="about__badge">
+					<strong>8+</strong>
+					<span>év tapasztalat</span>
+				</div>
+			</div>
+
+			<div class="about__content reveal" style="--reveal-delay: 120ms;">
+				<p class="section-header__eyebrow">Rólam</p>
+				<h2 class="section-header__title">Szia, <span class="text-gradient">David</span> vagyok.</h2>
+				<p>Kreatív fejlesztő és videóvágó — az a fajta, aki ugyanolyan otthon érzi magát egy functions.php-ben, mint egy DaVinci Resolve idővonalon. Szeretem, ha a technológia és a vizuális történetmesélés kéz a kézben dolgozik.</p>
+				<p>Jelenleg főleg egyedi WordPress fejlesztéssel, videóprodukcióval és 3D grafikával foglalkozom — a GitHubon pedig megtalálod a legfrissebb projektjeimet is.</p>
+
+				<ul class="about__tags">
+					<li>WordPress & PHP</li>
+					<li>Videóvágás</li>
+					<li>Blender / 3D</li>
+					<li>UI/UX</li>
+				</ul>
+
+				<div class="about__actions">
+					<a class="btn btn--outline" href="https://github.com/szxbodavee23" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+						GitHub profilom
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ SZOLGÁLTATÁSOK ============ -->
+	<section id="szolgaltatasok" class="section services">
+		<div class="container">
+			<header class="section-header reveal">
+				<p class="section-header__eyebrow">Szolgáltatások</p>
+				<h2 class="section-header__title">Amit az asztalra teszünk</h2>
+				<p class="section-header__sub">End-to-end kreatív és technológiai megoldások — a stratégiától a kivitelezésig.</p>
+			</header>
+
+			<div class="services-grid">
+				<article class="service-card reveal">
+					<div class="service-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+					</div>
+					<h3 class="service-card__title">Full-Stack Webfejlesztés</h3>
+					<p class="service-card__text">Egyedi WordPress témák, headless megoldások és teljes webalkalmazások — gyorsak, biztonságosak és keresőoptimalizáltak.</p>
+					<ul class="service-card__list">
+						<li>Egyedi WordPress téma- és pluginfejlesztés</li>
+						<li>WooCommerce & e-kereskedelem</li>
+						<li>Teljesítmény- és SEO-optimalizálás</li>
+					</ul>
+				</article>
+
+				<article class="service-card reveal" style="--reveal-delay: 100ms;">
+					<div class="service-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+					</div>
+					<h3 class="service-card__title">Videóvágás & Color Grading</h3>
+					<p class="service-card__text">Imázsfilmek, reklám- és social videók, mozifilmes színvilág. Ritmus, hangulat, történet — a vágóasztaltól a masterszigetig.</p>
+					<ul class="service-card__list">
+						<li>Imázs- és reklámfilmek, social tartalom</li>
+						<li>Color grading & sound design</li>
+						<li>Motion graphics & VFX</li>
+					</ul>
+				</article>
+
+				<article class="service-card reveal" style="--reveal-delay: 200ms;">
+					<div class="service-card__icon" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+					</div>
+					<h3 class="service-card__title">UI/UX & 3D</h3>
+					<p class="service-card__text">Letisztult, konverzióorientált felületek és látványos 3D vizuálok — a wireframe-től a végleges design rendszerig.</p>
+					<ul class="service-card__list">
+						<li>UI/UX tervezés & prototípusok</li>
+						<li>3D modellezés & renderelés</li>
+						<li>Arculat & design rendszerek</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ PORTFÓLIÓ (GitHub repók) ============ -->
+	<section id="munkaink" class="section portfolio">
+		<div class="container">
+			<header class="section-header reveal">
+				<p class="section-header__eyebrow">Portfólió</p>
+				<h2 class="section-header__title">Legutóbbi munkáink</h2>
+				<p class="section-header__sub">Válogatás a GitHub repóimból — szűrj nyelvekre, és nézd meg a forráskódot.</p>
+			</header>
+
+			<div data-portfolio>
+				<div class="portfolio-filters reveal" id="repo-filters" role="group" aria-label="Nyelv szerinti szűrés">
+					<button type="button" class="filter-btn is-active" data-filter="all">Összes</button>
+					<!-- A nyelv-gombokat a main.js generálja a repók alapján -->
+				</div>
+
+				<div class="portfolio-grid" id="repo-grid">
+					<!-- Betöltési skeleton — a JS cseréli le a repó kártyákra -->
+					<div class="project-card skeleton-card" aria-hidden="true"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line skeleton-line--w60"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line skeleton-line--w40"></div></div></div>
+					<div class="project-card skeleton-card" aria-hidden="true"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line skeleton-line--w60"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line skeleton-line--w40"></div></div></div>
+					<div class="project-card skeleton-card" aria-hidden="true"><div class="skeleton skeleton-img"></div><div class="skeleton-body"><div class="skeleton skeleton-line skeleton-line--w60"></div><div class="skeleton skeleton-line"></div><div class="skeleton skeleton-line skeleton-line--w40"></div></div></div>
+				</div>
+			</div>
+
+			<div class="portfolio-more reveal">
+				<a class="btn btn--outline" href="https://github.com/szxbodavee23?tab=repositories" target="_blank" rel="noopener noreferrer">Összes repo a GitHubon</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ============ KAPCSOLAT ============ -->
+	<section id="kapcsolat" class="section contact">
+		<div class="container contact__inner">
+			<div class="contact__info reveal">
+				<p class="section-header__eyebrow">Kapcsolat</p>
+				<h2 class="section-header__title">Van egy ötleted? <span class="text-gradient">Beszéljünk róla.</span></h2>
+				<p>Írd meg, mire van szükséged — 24 órán belül válaszolunk, kötelezettségek nélkül.</p>
+
+				<ul class="contact__details">
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+						<a href="mailto:hello@davidszabo.online">hello@davidszabo.online</a>
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+						Budapest / Remote
+					</li>
+					<li>
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+						H–P 9:00 – 18:00
+					</li>
+				</ul>
+			</div>
+
+			<form id="cst-contact-form" class="contact-form reveal" novalidate>
+				<input type="hidden" name="access_key" value="">
+				<input type="hidden" name="subject" value="Új ajánlatkérés — davidszabo.online">
+				<input type="hidden" name="from_name" value="davidszabo.online">
+				<input type="checkbox" name="botcheck" class="form-field--hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+				<div class="form-row">
+					<div class="form-field">
+						<label for="cst-name">Név <span class="req">*</span></label>
+						<input type="text" id="cst-name" name="name" autocomplete="name" required>
+					</div>
+					<div class="form-field">
+						<label for="cst-email">E-mail <span class="req">*</span></label>
+						<input type="email" id="cst-email" name="email" autocomplete="email" required>
+					</div>
+				</div>
+
+				<div class="form-field">
+					<label for="cst-type">Projekt típusa</label>
+					<select id="cst-type" name="project_type">
+						<option value="webfejlesztes">Full-Stack Webfejlesztés</option>
+						<option value="videovagas">Videóvágás & Color Grading</option>
+						<option value="uiux-3d">UI/UX & 3D</option>
+						<option value="egyeb">Egyéb</option>
+					</select>
+				</div>
+
+				<div class="form-field">
+					<label for="cst-message">Üzenet <span class="req">*</span></label>
+					<textarea id="cst-message" name="message" rows="5" required placeholder="Mesélj röviden a projektedről…"></textarea>
+				</div>
+
+				<button type="submit" class="btn btn--primary contact-form__submit">Üzenet küldése</button>
+				<p class="form-status" role="status" aria-live="polite"></p>
+			</form>
+		</div>
+	</section>
+
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<div class="site-footer__grid">
+			<div class="site-footer__brand">
+				<a class="site-branding__link" href="./" rel="home">
+					<span class="site-branding__mark" aria-hidden="true">SD</span>
+					<span class="site-branding__name">Szabó Dávid</span>
+				</a>
+				<p class="site-footer__tagline">Kreatív média, videóvágás és modern webfejlesztés egy kézben.</p>
+				<div class="social-links">
+					<a href="https://github.com/szxbodavee23" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+					</a>
+					<a href="https://instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+					</a>
+					<a href="https://youtube.com/" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.92 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+					</a>
+					<a href="https://linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="site-footer__col">
+				<h4 class="site-footer__title">Menü</h4>
+				<ul class="footer-menu">
+					<li><a href="#rolam">Rólam</a></li>
+					<li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+					<li><a href="#munkaink">Munkáink</a></li>
+					<li><a href="#kapcsolat">Kapcsolat</a></li>
+				</ul>
+			</div>
+
+			<div class="site-footer__col">
+				<h4 class="site-footer__title">Kapcsolat</h4>
+				<ul class="footer-menu">
+					<li><a href="mailto:hello@davidszabo.online">hello@davidszabo.online</a></li>
+					<li>Budapest / Remote</li>
+					<li>H–P 9:00 – 18:00</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="site-footer__bottom">
+			<p>© <span id="footer-year">2026</span> Szabó Dávid — Minden jog fenntartva.</p>
+			<p>Készült a Creative Studio témával.</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

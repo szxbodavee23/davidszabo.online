@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>404 — Az oldal nem található | Szabó Dávid</title>
+	<meta name="robots" content="noindex">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<script>
+	( function () {
+		var theme = 'dark';
+		try {
+			var saved = localStorage.getItem( 'cst-theme' );
+			if ( 'light' === saved || 'dark' === saved ) {
+				theme = saved;
+			}
+		} catch ( e ) {}
+		document.documentElement.setAttribute( 'data-theme', theme );
+	} )();
+	</script>
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	<main class="site-main">
+		<section class="error-404">
+			<div class="container error-404__inner">
+				<p class="error-404__code">404</p>
+				<h1>Az oldal nem található</h1>
+				<p>Úgy tűnik, a keresett tartalom elköltözött vagy sosem létezett.</p>
+				<div class="error-404__actions">
+					<a class="btn btn--primary" href="./">Vissza a főoldalra</a>
+					<a class="btn btn--outline" href="./#munkaink">Projektek böngészése</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
